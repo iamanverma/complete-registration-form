@@ -1,0 +1,111 @@
+  @import url('https://fonts.googleapis.com/css2?family=Sono&display=swap');
+
+  * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Sono', sans-serif;
+  }
+
+  html {
+      height: 100%;
+  }
+
+  body {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+
+  .navbar {
+      overflow: hidden;
+      display: flex;
+      flex-basis: 6vh;
+      align-items: center;
+  }
+
+  .navbar a {
+      color: black;
+      font-size: large;
+      text-decoration: none;
+      padding: 7px 20px;
+      display: block;
+      float: left;
+      /*must add overflow:hidden in parent element*/
+      font-family: 'Sono', sans-serif;
+      transition-property: color;
+      border-radius: 6px;
+  }
+
+  .navbar a:hover {
+      color: #178cda;
+      transition-duration: 0.2s;
+      transition-timing-function: ease-in-out;
+      background-color: white;
+  }
+
+  @media screen and (max-width:500px) {
+      .navbar {
+          flex-direction: column;
+          text-align: center;
+      }
+  }
+
+  /* ********************************************************************************** */
+  .body-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      flex-basis: 87.9vh;
+      background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+  }
+
+  .body-message {
+      font-size: 3rem;
+      font-weight: 500;
+  }
+  .body-message-profile {
+      font-size: 2rem;
+      font-weight: 500;
+  }
+  .body-message-2  {
+      font-size: 1.5rem;
+      font-weight: 300;
+  }
+
+  .button a {
+      text-decoration: none;
+      font-size: 1.3rem;
+      border: 3px solid rgb(81, 4, 81);
+      color: black;
+      border-radius: 20px;
+      padding: 5px 80px;
+  }
+
+  .button {
+      /* height: 29px; */
+      margin: 30px 0;
+      padding: 10px 30px;
+  }
+  .button a:hover {
+        color :white;
+        background-color: #a116d8;
+  }
+
+
+
+  /* ********************************************************************************** */
+
+  .footer {
+      margin-top: auto;
+      color: black;
+      font-family: 'Sono', sans-serif;
+      font-size: 14px;
+      text-align: center;
+      padding: 14px 20px;
+      flex-basis: 5vh;
+  }

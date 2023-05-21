@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="/css/styleForLogin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {{>navbar}}
+    <div class="outer-container">
+        <div class="container">
+            <div class="title">Login Form</div>
+            <div class="content">
+                <form action="/login" method="post">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Email</span>
+                            <input type="text" placeholder="Enter your email" name="email" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Password</span>
+                            <input type="password" placeholder="Enter your password" name="password" required>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Login">
+                    </div>
+                </form>
+            </div>
+            <div class="errMessage">
+                {{message}}
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+
+</html>
