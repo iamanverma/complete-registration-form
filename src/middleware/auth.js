@@ -6,7 +6,8 @@ const auth = async (req, res, next) => {
     try {
         const token = req.cookies.jwt;
 
-        const verifiedUser = jwt.verify(token, process.env.SECRET_KEY);
+        // const verifiedUser = jwt.verify(token, process.env.SECRET_KEY);
+        const verifiedUser = jwt.verify(token, "mynameisamanvermathisissecretkey");
         // console.log(verifiedUser);
 
         //----------Getting whole user Data using TOKEN only

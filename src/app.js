@@ -7,7 +7,7 @@ const hbs = require('hbs');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const Register = require("./models/userReg");       //creating db collection
 const auth = require("./middleware/auth.js");       //function with parameters (req,res,next)
 
