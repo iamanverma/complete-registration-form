@@ -33,7 +33,6 @@ const userSchema = new mongoose.Schema({
 userSchema.methods.generateAuthToken = async function () {
     try {
         const newToken = jwt.sign({ _id: this._id.toString() }, process.env.SECRET_KEY);
-        // const newToken = jwt.sign({ _id: this._id.toString() }, "mynameisamanvermathisissecretkey");
         this.tokens = this.tokens.concat({ token: newToken });     //adding tokens added to previously added token
         await this.save();          //saving tokens object into database => this refers to document when calling
         return newToken;            //returning newly added token to this function
